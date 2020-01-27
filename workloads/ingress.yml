@@ -15,7 +15,7 @@ spec:
       - path: /pi
         backend:
           serviceName: podinfo
-          servicePort: 9898
+          servicePort: 9899
       - path: /hw
         backend:
           serviceName: sample-app
