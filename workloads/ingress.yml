@@ -19,7 +19,7 @@ spec:
       - path: /hw
         backend:
           serviceName: sample-app
-          servicePort: 8080
+          servicePort: 8082
       - path: /ad
         backend:
           serviceName: additional-app

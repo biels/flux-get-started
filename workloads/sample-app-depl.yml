@@ -12,9 +12,9 @@ spec:
     app: sample-app-depl
   ports:
   - name: http
-    port: 8080
+    port: 8082
     protocol: TCP
-    targetPort: http
+    targetPort: 8080
 ---
 apiVersion: apps/v1
 kind: Deployment
