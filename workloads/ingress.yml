@@ -19,4 +19,4 @@ spec:
       - path: /hw
         backend:
           serviceName: sample-app
-          servicePort: 9898
+          servicePort: 8080
