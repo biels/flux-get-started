@@ -16,3 +16,7 @@ spec:
         backend:
           serviceName: podinfo
           servicePort: 9898
+      - path: /hw
+        backend:
+          serviceName: sample-app
+          servicePort: 9898
