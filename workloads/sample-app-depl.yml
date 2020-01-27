@@ -27,6 +27,7 @@ metadata:
     fluxcd.io/tag.init: regex:^3.10.*
     fluxcd.io/tag.podinfod: semver:~3.1
   name: sample-app-depl
+  namespace: demo
 spec:
   replicas: 3
   selector:
