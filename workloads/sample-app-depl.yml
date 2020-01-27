@@ -40,7 +40,7 @@ spec:
         app: sample-app-depl
     spec:
       containers:
-      - image: carinamarina/hello-world-app
+      - image: gcr.io/google-samples/node-hello:1.0
         name: hello-world-cont
         ports:
         - containerPort: 8080
