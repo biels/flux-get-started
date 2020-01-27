@@ -37,6 +37,7 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: load-balancer-example
+        app: sample-app-depl
     spec:
       containers:
       - image: gcr.io/google-samples/node-hello:1.0
