@@ -20,3 +20,7 @@ spec:
         backend:
           serviceName: sample-app
           servicePort: 8080
+      - path: /ad
+        backend:
+          serviceName: additional-app
+          servicePort: 8081
