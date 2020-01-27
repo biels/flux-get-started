@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: load-balancer-example
+  annotations:
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.init: regex:^3.10.*
+    fluxcd.io/tag.podinfod: semver:~3.1
+  name: sample-app-depl
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: load-balancer-example
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: load-balancer-example
+    spec:
+      containers:
+      - image: gcr.io/google-samples/node-hello:1.0
+        name: hello-world-cont
+        ports:
+        - containerPort: 8080
