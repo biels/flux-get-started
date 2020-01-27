@@ -41,6 +41,7 @@ spec:
     spec:
       containers:
       - image: gcr.io/google-samples/node-hello:1.0
-        name: hello-world-cont
+        name: hello-world
         ports:
         - containerPort: 8080
+          protocol: TCP
