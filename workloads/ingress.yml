@@ -4,7 +4,7 @@ metadata:
   name: test-ingress
   namespace: demo
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
     nginx.ingress.kubernetes.io/use-regex: "true"
     fluxcd.io/automated: "true"
     fluxcd.io/tag.init: regex:^3.10.*
@@ -25,11 +25,11 @@ spec:
         backend:
           serviceName: additional-app
           servicePort: 8081
-      - path: /hasura(/|$)(.*)
+      - path: /hasura/(.+)
         backend:
           serviceName: hasura
           servicePort: 81
-          
+
       - backend:
           serviceName: hasura
           servicePort: 81
