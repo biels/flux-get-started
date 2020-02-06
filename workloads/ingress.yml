@@ -21,7 +21,7 @@ spec:
         backend:
           serviceName: sample-app
           servicePort: 8082
-      - path: /ad(/|$)(.*)
+      - path: /ad
         backend:
           serviceName: additional-app
           servicePort: 8081
@@ -29,3 +29,9 @@ spec:
         backend:
           serviceName: hasura
           servicePort: 81
+          
+      - backend:
+          serviceName: hasura
+          servicePort: 81
+        path: /something(/|$)(.*)
+
