@@ -17,11 +17,11 @@ spec:
         backend:
           serviceName: podinfo
           servicePort: 9899
-      - path: /hw
+      - path: /hw(/|$)(.*)
         backend:
           serviceName: sample-app
           servicePort: 8082
-      - path: /ad
+      - path: /ad(/|$)(.*)
         backend:
           serviceName: additional-app
           servicePort: 8081
