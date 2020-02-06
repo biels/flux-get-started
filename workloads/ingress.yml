@@ -24,3 +24,7 @@ spec:
         backend:
           serviceName: additional-app
           servicePort: 8081
+      - path: /hasura
+        backend:
+          serviceName: hasura
+          servicePort: 80
