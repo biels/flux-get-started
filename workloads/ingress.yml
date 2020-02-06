@@ -27,4 +27,4 @@ spec:
       - path: /hasura
         backend:
           serviceName: hasura
-          servicePort: 80
+          servicePort: 81
